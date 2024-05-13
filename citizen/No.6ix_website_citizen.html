@@ -1,0 +1,578 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>NO.6IX – 鎮民</title>
+	<style type="text/css">
+/* 網頁捲軸【寬度】 */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* 網頁捲軸【背景】顏色 */
+::-webkit-scrollbar-track {
+  background: #2a1f3e;
+}
+
+/* 網頁捲軸【把手】顏色 */
+::-webkit-scrollbar-thumb {
+  background: #d1bbfa;
+  border-radius: 0.5em;
+}
+
+/* 網頁捲軸【滑過時】把手的顏色 */
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(183,100%,81%,1.00);
+}
+nav {
+    list-style-type: none;
+    background-image: -webkit-linear-gradient(283deg,rgba(39,28,47,1.00) 14.51%,rgba(187,132,106,1.00) 100%,rgba(47,36,28,1.00) 100%);
+    background-image: -moz-linear-gradient(283deg,rgba(39,28,47,1.00) 14.51%,rgba(187,132,106,1.00) 100%,rgba(47,36,28,1.00) 100%);
+    background-image: -o-linear-gradient(283deg,rgba(39,28,47,1.00) 14.51%,rgba(187,132,106,1.00) 100%,rgba(47,36,28,1.00) 100%);
+    background-image: linear-gradient(167deg,rgba(39,28,47,1.00) 14.51%,rgba(187,132,106,1.00) 100%,rgba(47,36,28,1.00) 100%);
+	}
+div nav ul {
+    width: 35%;
+    list-style-type: none;
+    float: right;
+    padding-top: 0px;
+    margin-top: -60px;
+    margin-bottom: 25px;
+    position: static;
+	}
+ul li {
+    font-family: "華康中黑體";
+    color: #FFFFFF;
+    width: 100px;
+    text-align: center;
+    float: left;
+		}
+#town , #gameplay{
+    margin-right: -3px;
+}
+#job, #citizen, #donate {
+    margin-right: 4px;
+    margin-left: 3px;
+}
+ul li a:hover {
+    color: hsla(183,100%,81%,1.00);
+		}
+ul li a {
+    color: #FFFFFF;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 52px;
+    float: left;
+    text-decoration: none;
+		}
+.logo img {
+    margin-left: 4%;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+#myBtn {
+	display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 15px;
+    background-color: #936CAC;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-image: url(../images/arrow-up-icon.png);
+    background-position: 35% 100%;
+}
+#myBtn:hover {
+    background-color: #6BAEFF;
+}
+body {
+	height:100%; 
+	margin:0px; 
+	padding:0px;
+	background:#2c3049;
+	}
+#content {
+    width: 100%;
+    position: absolute;
+    border-left-width: medium;
+    background-color: #16111B;
+    background-image: url(../images/rockwallP.jpg);
+	}
+#content .all {
+    /*margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 100%;*/
+}
+.top {
+    color: #86659C;
+    font-family: "華康中黑體";
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: hsla(276,24%,8%,1.00);
+    border-top: 7px double hsla(278,24%,52%,1.00);
+    border-bottom: 7px double hsla(278,24%,52%,1.00);
+    font-size: medium;
+}
+.top div{
+    font-size: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.top h3{
+    /*font-size: 100px;*/
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.mid {
+    /*display: none;*/
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+    animation: fadeEffect 1s;
+}
+.people {
+    width: 200px;
+    height: 300px;
+    display: inline-block;
+    margin-top: 0px;
+}
+.mid img {
+    width: 150px;
+    height: 150px;
+    margin-left: 23px;
+    border: 2px solid #FFFFFF;
+}
+.mid h2 {
+    color: #A68EB6;
+    text-align: center;
+    font-family: "微軟正黑體";
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 16pt;
+}
+.mid h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 18pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.mid h3 {
+    color: #B68ED1;
+    text-align: center;
+    font-family: "微軟正黑體";
+    font-size: 16pt;
+    margin-top: 0px;
+}
+footer {
+    background-color: #271C2F;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    line-height: 85px;
+    width: 100%;
+    border-top: medium solid #86659C;
+    margin-top: 0px;
+    margin-bottom: -18px;
+}
+.switchLink {
+    margin-right: auto;
+    margin-left: auto;
+    height: 90px;
+    display: block;
+    margin-top: 12px;
+    border-bottom: 6px double hsla(278,24%,52%,1.00);
+    margin-bottom: 90px;
+    padding-bottom: 14px;
+    width: 100%;
+}
+.linkbottom {
+    margin: auto;
+    width: 60%;
+    font-size: medium;
+}
+.linkbottom div {
+    color: hsla(0,0%,100%,1.00);
+    font-family: "華康中黑體";
+    display: inline-table;
+    width: 120px;
+    text-align: center;
+    font-size: 18pt;
+    background-color: hsla(277,19%,13%,1.00);
+    border-radius: 30px;
+    line-height: 50px;
+    margin-top: 15px;
+    border: 3px double hsla(278,24%,52%,1.00);
+    margin-left: 7.2%;
+}
+.linkbottom div a:hover{
+    color: hsla(0,0%,100%,1.00);
+    text-decoration: none;
+    background-color: hsla(278,24%,52%,1.00);
+}
+.linkbottom div a{
+    color: hsla(0,0%,100%,1.00);
+    font-family: "華康中黑體";
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: hsla(277,19%,13%,1.00);
+    border-radius: 25px;
+    text-decoration: none;
+    height: 100%;
+}
+.mid .switchdiv {
+    margin-bottom: 70px;
+}
+		
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@font-face {
+  font-family: Black Ops One;
+  src: url("../words/BlackOpsOne-Regular.ttf");
+}
+@font-face {
+  font-family: 華康中黑體;
+  src: url("../words/華康中黑體.ttf");
+}
+    </style>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+	<script>
+var __adobewebfontsappname__="dreamweaver"
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+	
+  window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+  function scrollFunction()
+	{ 
+		if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0)
+		{
+			document.getElementById("myBtn").style.display = "block";
+		}
+		else
+		{
+			document.getElementById("myBtn").style.display = "none";
+		}
+	}
+	//網頁捲動超過200pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+// 重置scrollTop這個變數的值
+function topFunction() 
+	{
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+//the top butonSwitch div 
+  function DivSwithch(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+	  
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("switchdiv");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById("Large"+cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  }
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('../images/DONATE_new_2.png')">
+	<div>
+		<nav>
+			<li class="logo">
+				<a href="../No.6ix_website.html"><img src="../images/LOGO_WORD_NEW.png" alt="" width="225" height="80" align="absmiddle"></a>&nbsp;
+			</li>
+	  	  	<ul>
+				<li id="town"><a href="../town/No.6ix_website_town.html">AboutUs</a></li>
+				<li id="gameplay"><a href="../gameplay/No.6ix_website_gameplay.html">Rules</a></li>
+				<li id="job"><a href="../job/No.6ix_website_job.html">Profession</a></li>
+				<li id="citizen"><a href="No.6ix_website_citizen.html">Character</a></li>
+				<!--<li id="forum"><a href="../forum/No.6ix_website_forum.html">論壇</a></li>-->
+				<li id="donate"><a href="../donate/No.6ix_website_donate.html">SupportUs</a></li>
+		 	</ul>
+<div style="clear:both;"></div>
+	  </nav>
+	</div>
+	<div id="content">
+<div class="all">
+  <div class="top">
+  <div>主要角色</div>
+  <h3>Main Characters</h3>
+  </div>
+    <div class="switchLink">
+          <div class="linkbottom">
+            <div id="toplink1" class="tablinks" onclick="DivSwithch(event, '1')"><a>警察</a></div>
+            <div id="toplink2" class="tablinks" onclick="DivSwithch(event, '2')"><a>醫護</a></div>
+            <div id="toplink3" class="tablinks" onclick="DivSwithch(event, '3')"><a>司法部</a></div>
+            <div id="toplink4" class="tablinks" onclick="DivSwithch(event, '4')"><a>企業</a></div>
+            <div id="toplink5" class="tablinks" onclick="DivSwithch(event, '5')"><a>黑幫</a></div>
+            &nbsp;</div>
+  &nbsp;</div>
+    <div class="mid">
+	      <div class="switchdiv" id="Large1">
+	        <div class="people" id="citizen-1">
+	          <h2>marktu#9219</h2>
+	          <a href="https://www.twitch.tv/marktu0" target="_blank"><img src="image/polices/police_FTO.png" width="152" height="152" alt=""/></a>
+	          <h1>馬 德畢</h1>
+	          <h3>三級警員</h3>
+	          &nbsp;</div>
+	        <div class="people" id="citizen-2">
+	          <h2>Fong#8079</h2>
+	          <a href="https://www.twitch.tv/fong335425" target="_blank"><img src="image/polices/police_FTO2.png" width="580" height="580" alt=""/></a>
+	          <h1>崔 皓</h1>
+	          <h3>三級警員 </h3>
+	          &nbsp;</div>
+	        <div class="people" id="citizen-3">
+	          <h2>笙o#0799</h2>
+	          <a href="https://www.twitch.tv/jordan10312" target="_blank"><img src="image/polices/police_FTO3.png" width="664" height="664" alt=""/></a>
+	          <h1>朽木 笙</h1>
+	          <h3>三級警員 </h3>
+	          &nbsp;</div>
+	        <div class="people" id="citizen-4">
+	          <h2>NI妮#4857</h2>
+	          <a href="https://twitch.tv/niniyousn" target="_blank"><img src="image/polices/police_FTO4.png" width="724" height="724" alt=""/></a>
+	          <h1>韓 汐</h1>
+	          <h3>三級警員 </h3>
+	          &nbsp;</div>
+	        <div class="people" id="citizen-5">
+	          <h2>NiniS#4176</h2>
+	          <a href="https://www.twitch.tv/ninismeister" target="_blank"><img src="image/polices/police_FTO5.jpg" width="381" height="387" alt=""/></a>
+	          <h1>林 小四</h1>
+	          <h3>三級警員 </h3>
+	          &nbsp;</div>
+			<div class="people" id="citizen-6">
+	          <h2>Discord#ID</h2>
+	          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+        	  <h1>鎮民名字</h1>
+	          <h3>職業 </h3>
+	          &nbsp;</div>
+	        <div class="people" id="citizen-7">
+	          <h2>Discord#ID</h2>
+	          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+	          <h1>鎮民名字</h1>
+	          <h3>職業</h3>
+	          &nbsp;</div>
+&nbsp;</div>
+<div class="switchdiv" id="Large2">
+  <div class="people" id="citizen-8">
+    <h2>柔伊#8732</h2>
+    <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>院長 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-9">
+          <h2>hauner#4342</h2>
+          <img src="image/EMS/EMS_2.png" width="152" height="152" alt=""/>
+          <h1>金鋇珼</h1>
+          <h3>副院長 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-10">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+	    &nbsp;</div>
+        <div class="people" id="citizen-11">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+	    &nbsp;</div>
+        <div class="people" id="citizen-12">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+	    &nbsp;</div>
+        <div class="people" id="citizen-13">
+		<h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-14">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  		&nbsp;</div>
+      &nbsp;</div>
+		
+      <div class="switchdiv" id="Large3">
+<div class="people" id="citizen-15">
+  		<h2>JoJo-品芝麻關#0761</h2>
+ 		<img src="image/law/Law_1.png" width="152" height="152" alt=""/>
+ 		<h1>包 不同</h1>
+		  <h3>大法官 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-16">
+          <h2>Woen#8345</h2>
+          <a href="https://www.twitch.tv/bogo0509" target="_blank"><img src="image/law/Law_2.png" width="152" height="152" alt=""/></a>
+          <h1>田中 賈納森</h1>
+          <h3>大法官 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-17">
+          <h2>ʚ ⋆ 𝐁𝐞𝐥𝐥𝐚 𝐅𝐥𝐨𝐰𝐞𝐫 ⍣ ɞ#0542</h2>
+          <a href="https://www.twitch.tv/bellaflower542" target="_blank"><img src="image/law/Law_3.png" width="152" height="152" alt=""/></a>
+          <h1>芙洛爾 尤金妮</h1>
+          <h3>書記官 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-18"> 
+          <h2>Yurizi#2797</h2>
+          <a href="https://www.twitch.tv/liabuku0" target="_blank"><img src="image/law/Law_4.png" width="152" height="152" alt=""/></a>
+          <h1>姬野 綾依</h1>
+          <h3>書記官 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-19">
+          <h2>魚乾乾#8866</h2>
+          <a href="https://www.twitch.tv/xuanminz" target="_blank"><img src="image/emptyIMG.jpg" width="233" height="233" alt=""/></a>
+          <h1>陳 宣閔</h1>
+          <h3>書記官</h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-20">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  		&nbsp;</div>
+        <div class="people" id="citizen-21">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  		&nbsp;</div>
+        
+       
+        &nbsp;</div>
+
+      <div class="switchdiv" id="Large4">
+<div class="people" id="citizen-22">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>老闆 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-23">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        
+        <div class="people" id="citizen-24">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-25">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業</h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-26">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-27">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-28">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        
+        
+        &nbsp;</div>
+		
+      <div class="switchdiv" id="Large5">
+<div class="people" id="citizen-29">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>老大 </h3>
+          &nbsp;</div>
+        <div class="people" id="citizen-30">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-31">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-32">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-33">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-34">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+        <div class="people" id="citizen-35">
+          <h2>Discord#ID</h2>
+          <img src="image/emptyIMG.jpg" width="233" height="233" alt=""/>
+          <h1>鎮民名字</h1>
+          <h3>職業 </h3>
+  &nbsp;</div>
+&nbsp;</div>
+&nbsp;</div>
+	<!--暫時隱藏，所有職業-->
+	
+<!--<div class="frame">&nbsp;</div>-->
+&nbsp;</div>
+	  <footer>Copyright©2022 NO.6IX Dai_Rain, All rights reserved</footer>
+	 &nbsp;</div>
+	<button onclick="topFunction()" id="myBtn" title="Gotop"></button>
+	
+<script>
+  document.getElementById("toplink1").click();
+</script>
+</body>
+</html>
